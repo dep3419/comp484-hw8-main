@@ -1,0 +1,186 @@
+/* Color Palette
+#1 — Midnight Blue: #1A2B4C
+#2 — Soft Sky: #A7C7E7
+#3 — Mist Gray: #F2F4F7
+#4 — Coral Accent: #FF6F61
+*/
+
+/* Global styles
+------------------------------------*/
+/* Box Model Fix
+------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Added reusable content wrapper */
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* Added reusable column styles */
+
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+body {
+    background: #F2F4F7;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation Menu
+------------------------------------*/
+
+.main-nav {
+    background-color: #1A2B4C;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+}
+
+.main-nav a:hover {
+    background-color: #FF6F61;
+}
+
+/* Header & Footer
+------------------------------------*/
+.header-section {
+    background:
+        linear-gradient(
+            to right,
+            rgba(26, 43, 76, 0.92),
+            rgba(26, 43, 76, 0.60)
+        ),
+        url("../Images/computer-science-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Updated profile image styles */
+
+.profile-img {
+    border-radius: 50%;
+}
+
+/* Removed margins from header headings */
+
+.header-section h1,
+.header-section h2 {
+    margin: 0;
+}
+
+.footer-section {
+    background-color: #1A2B4C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-section a {
+    color: #A7C7E7;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Added footer link spacing */
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+.contact-info i {
+    margin-right: 5px;
+}
+
+/* Work Experience
+------------------------------------*/
+.work-section {
+    background-color: #A7C7E7;
+    padding: 20px;
+}
+
+/* Education
+------------------------------------*/
+.education-section {
+    background-color: #F2F4F7;
+    padding: 20px;
+}
+
+/* Typography adjustments
+------------------------------------*/
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+
+    /* Removed top margin */
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+p,
+li {
+    font-size: 1rem;
+}
+/* Extra CSS to make the downloaded PDF have all the content with a good layout
+------------------------------------*/
+@media print {
+
+    .main-nav {
+        display: none;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    .work-section,
+    .education-section,
+    .footer-section {
+        page-break-inside: avoid;
+    }
+}
