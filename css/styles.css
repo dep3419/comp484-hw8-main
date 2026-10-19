@@ -82,7 +82,7 @@ h1, h2, h3 {
             rgba(26, 43, 76, 0.92),
             rgba(26, 43, 76, 0.60)
         ),
-        url("../Images/computer-science-bg.jpg");
+        url("../images/computer-science-bg.jpg");
 
     background-size: cover;
     background-position: center;
